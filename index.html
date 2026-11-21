@@ -111,6 +111,7 @@
       opacity: 0.9;
     }
 
+    /* ページ全体の言語切替制御 */
     .lang-en {
       display: none;
     }
@@ -123,6 +124,18 @@
       display: block;
     }
 
+    span.lang-en {
+      display: none;
+    }
+
+    body.show-en span.lang-ja {
+      display: none;
+    }
+
+    body.show-en span.lang-en {
+      display: inline;
+    }
+
     .is-hidden {
       display: none;
     }
@@ -133,10 +146,16 @@
     <header class="card">
       <h1>Hi, I'm Sanri. 👋</h1>
       <p class="subtitle">🏭 Industrial Energy ➔ 📊 App Planning ➔ 🎓 Sociology &amp; AI Student</p>
-      <p class="lead">
+
+      <div class="lang-ja lead">
         <strong>現場のドメイン知識 × データエンジニアリング × 社会学</strong><br />
         実現場の課題を、数理とテクノロジーで解決することを目指す社会人学生です。
-      </p>
+      </div>
+      <div class="lang-en lead">
+        <strong>Domain Knowledge × Data Engineering × Sociology</strong><br />
+        A working adult student aiming to solve real-world現場 challenges with mathematics and technology.
+      </div>
+
       <div class="toolbar">
         <button id="lang-toggle-btn" class="btn" type="button" aria-pressed="false">
           English / 日本語 切替
@@ -148,7 +167,9 @@
     </header>
 
     <section class="card">
-      <h2>🚀 About Me / 自己紹介</h2>
+      <h2>
+        🚀 <span class="lang-ja">About Me / 自己紹介</span><span class="lang-en">About Me</span>
+      </h2>
       <div class="lang-ja">
         <ul>
           <li><strong>現在のキャリア:</strong> 営業系アプリの企画担当。前職の工場エネルギー管理で培った「現場感覚」を大切にしています。</li>
@@ -166,47 +187,83 @@
     </section>
 
     <section class="card">
-      <h2>🛠 Skills &amp; Licenses / スキル・資格</h2>
-      <h3>💻 Tech Stack</h3>
-      <ul>
-        <li><strong>Data:</strong> Python (Pandas/NumPy), SQL (Oracle Master Silver), Databricks</li>
-        <li><strong>BI/Low-Code:</strong> Power BI, Power Query (M Language)</li>
-        <li><strong>3D/Creative:</strong> Blender, Python Scripting (bpy)</li>
-      </ul>
+      <h2>
+        🛠 <span class="lang-ja">Skills &amp; Licenses / スキル・資格</span><span class="lang-en">Skills &amp; Licenses</span>
+      </h2>
 
-      <h3>📜 Professional Licenses (Industrial &amp; Business)</h3>
-      <ul>
-        <li><strong>Energy:</strong> エネルギー管理士 (熱), 第3種電気主任技術者</li>
-        <li><strong>Business:</strong> 統計検定2級, 日商簿記2級</li>
-      </ul>
+      <h3>
+        💻 <span class="lang-ja">Tech Stack / 技術スタック</span><span class="lang-en">Tech Stack</span>
+      </h3>
+      <div class="lang-ja">
+        <ul>
+          <li><strong>データ:</strong> Python (Pandas/NumPy), SQL (Oracle Master Silver), Databricks</li>
+          <li><strong>BI・ローコード:</strong> Power BI, Power Query (M言語)</li>
+          <li><strong>3D・クリエイティブ:</strong> Blender, Pythonスクリプト (bpy)</li>
+        </ul>
+      </div>
+      <div class="lang-en">
+        <ul>
+          <li><strong>Data:</strong> Python (Pandas/NumPy), SQL (Oracle Master Silver), Databricks</li>
+          <li><strong>BI/Low-Code:</strong> Power BI, Power Query (M Language)</li>
+          <li><strong>3D/Creative:</strong> Blender, Python Scripting (bpy)</li>
+        </ul>
+      </div>
+
+      <h3>
+        📜 <span class="lang-ja">Professional Licenses / 保有資格</span><span class="lang-en">Professional Licenses (Industrial &amp; Business)</span>
+      </h3>
+      <div class="lang-ja">
+        <ul>
+          <li><strong>エネルギー:</strong> エネルギー管理士 (熱), 第3種電気主任技術者</li>
+          <li><strong>ビジネス・統計:</strong> 統計検定2級, 日商簿記2級</li>
+        </ul>
+      </div>
+      <div class="lang-en">
+        <ul>
+          <li><strong>Energy:</strong> Energy Manager (Thermal), Chief Electrical Engineer (Class 3)</li>
+          <li><strong>Business:</strong> Statistics Certification Grade 2, Official Business Bookkeeping Grade 2</li>
+        </ul>
+      </div>
     </section>
 
     <section class="card">
-      <h2>📂 Featured Projects / 公開プロジェクト</h2>
+      <h2>
+        📂 <span class="lang-ja">Featured Projects / 公開プロジェクト</span><span class="lang-en">Featured Projects</span>
+      </h2>
       <h3>
         <a href="https://github.com/kmt-sanri/alexa-fishing-weather-jp" target="_blank" rel="noopener noreferrer">
           🎣 Alexa Fishing Weather Reporter
         </a>
       </h3>
-      <p>
-        気象庁のJSON APIを活用し、特定の釣り場の波浪情報を通知するAlexaスキル。<br />
-        (An Alexa skill that fetches marine weather data using JMA API.)
+      <p class="lang-ja">
+        気象庁のJSON APIを活用し、特定の釣り場の波浪情報を通知するAlexaスキルです。
+      </p>
+      <p class="lang-en">
+        An Alexa skill that fetches marine weather data for specific fishing spots using the JMA JSON API.
       </p>
     </section>
 
     <section class="card">
-      <h2>🎓 GitHub Education Status</h2>
-      <p>
-        I am a student at <strong>ZEN University</strong>. I use GitHub to manage my academic exercises in mathematical sciences and personal development projects.<br />
-        (ZEN大学の学生として、数理科学の演習ログや個人プロジェクトの管理にGitHubを活用しています。)
+      <h2>
+        🎓 <span class="lang-ja">GitHub Education Status / 学業とGitHubの活用</span><span class="lang-en">GitHub Education Status</span>
+      </h2>
+      <p class="lang-ja">
+        <strong>ZEN大学</strong>の学生として、数理科学の演習ログや個人プロジェクトの管理にGitHubを活用しています。
+      </p>
+      <p class="lang-en">
+        I am a student at <strong>ZEN University</strong>. I use GitHub to manage my academic exercises in mathematical sciences and personal development projects.
       </p>
     </section>
 
     <section id="disclaimer-box" class="card is-hidden">
-      <h2>⚠️ Disclaimer / 免責事項</h2>
-      <p>
-        All repositories here are for <strong>personal study and hobby purposes</strong>. They are not actively maintained. Use at your own risk.<br />
-        (公開しているコードは個人の学習・趣味用です。継続的なメンテナンスは行いませんので、自己責任でご利用ください。)
+      <h2>
+        ⚠️ <span class="lang-ja">Disclaimer / 免責事項</span><span class="lang-en">Disclaimer</span>
+      </h2>
+      <p class="lang-ja">
+        公開しているコードは個人の学習・趣味用です。継続的なメンテナンスは行いませんので、自己責任でご利用ください。
+      </p>
+      <p class="lang-en">
+        All repositories here are for <strong>personal study and hobby purposes</strong>. They are not actively maintained. Use at your own risk.
       </p>
     </section>
   </div>
@@ -221,6 +278,7 @@
         langBtn.addEventListener("click", () => {
           const isEn = document.body.classList.toggle("show-en");
           langBtn.setAttribute("aria-pressed", String(isEn));
+          document.documentElement.lang = isEn ? "en" : "ja";
         });
       }
 
@@ -228,7 +286,12 @@
         disclaimerBtn.addEventListener("click", () => {
           const isHidden = disclaimerBox.classList.toggle("is-hidden");
           disclaimerBtn.setAttribute("aria-expanded", String(!isHidden));
-          disclaimerBtn.textContent = isHidden ? "免責事項を表示" : "免責事項を隠す";
+          const isEn = document.body.classList.contains("show-en");
+          if (isEn) {
+            disclaimerBtn.textContent = isHidden ? "Show Disclaimer" : "Hide Disclaimer";
+          } else {
+            disclaimerBtn.textContent = isHidden ? "免責事項を表示" : "免責事項を隠す";
+          }
         });
       }
     });
