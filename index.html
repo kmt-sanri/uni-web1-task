@@ -136,24 +136,36 @@
       display: block;
     }
 
-    span.lang-en {
+    span.lang-en,
+    p.lang-en,
+    h1.lang-en {
       display: none;
     }
 
-    body.show-en span.lang-ja {
+    body.show-en span.lang-ja,
+    body.show-en p.lang-ja,
+    body.show-en h1.lang-ja {
       display: none;
     }
 
     body.show-en span.lang-en {
       display: inline;
     }
+
+    body.show-en p.lang-en,
+    body.show-en h1.lang-en {
+      display: block;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <header class="card hero">
-      <h1>Hi, I'm Sanri. 👋</h1>
-      <p class="subtitle">🏭 Industrial Energy ➔ 📊 App Planning ➔ 🎓 Sociology &amp; AI Student</p>
+      <h1 class="lang-ja">こんにちは、Sanriです。👋</h1>
+      <h1 class="lang-en">Hi, I'm Sanri. 👋</h1>
+
+      <p class="subtitle lang-ja">🏭 工場エネルギー管理 ➔ 📊 アプリ企画 ➔ 🎓 社会学・AI専攻学生</p>
+      <p class="subtitle lang-en">🏭 Industrial Energy ➔ 📊 App Planning ➔ 🎓 Sociology &amp; AI Student</p>
 
       <div class="lang-ja lead">
         <strong>現場のドメイン知識 × データエンジニアリング × 社会学</strong><br />
